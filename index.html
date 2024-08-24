@@ -11,555 +11,466 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>North Star</title>
-</head>
-<style>
-    .color1 {
-        color: #12090a;
-        color: #2f2846;
-        color: #695d91;
-        color: #af99e6;
-        color: #f4d0ed;
-        color: #008080;
-        color: #00bcd4;
-        color: #f0f0f0;
-        color: #333333;
-        color: #1a1a2e;
-    }
-
-    /* -----------scroll bar hide--------------- */
-    /* For Webkit browsers (Chrome, Safari, etc.) */
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* For other browsers */
-    body {
-        overflow: -moz-scrollbars-none;
-        -ms-overflow-style: none;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Roboto", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        height: 100vh;
-        background: linear-gradient(135deg, #008080, #00bcd4);
-        background-attachment: fixed;
-    }
-
-    /* navbar */
-    .navbarContainer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(0, 128, 128, 0.2);
-        padding: 1em 2em;
-        height: 150px;
-        backdrop-filter: blur(10px);
-    }
-
-
-    .navLogo {
-        height: 100px;
-        width: auto;
-        margin: 0 1em;
-    }
-
-    .centerText {
-        text-align: center;
-        flex-grow: 1;
-        margin: 0 2em;
-    }
-
-
-    .clubName {
-        font-size: 60px;
-        font-weight: bolder;
-        color: aliceblue;
-    }
-
-    .affiliation {
-        font-size: 20px;
-        color: aliceblue;
-    }
-
-    .affiliation span {
-        font-size: 12px;
-    }
-
-    /* home layer 1 */
-    .homeContainerLayer1 {
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: #C7253E;
-        color: aliceblue;
-        font-size: 55px;
-        border-top: 2px solid aliceblue;
-        border-bottom: 2px solid aliceblue;
-    }
-
-    /* home layer 2 */
-    .homeContainerLayer2 {
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 2px solid aliceblue;
-    }
-
-    .mottoBox {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: relative;
-    }
-
-    .mottoText {
-        cursor: pointer;
-        color: aliceblue;
-        height: 80%;
-        width: 80%;
-        font-size: 50px;
-        font-weight: bold;
-    }
-
-    .mottoBox span {
-        display: inline-block;
-        transition: transform 0.3s ease;
-    }
-
-    .mottoBox span:hover {
-        transform: translateY(-10px);
-    }
-
-
-    /* home layer 3 */
-    .homeContainerLayer3 {
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #C7253E;
-        font-size: 55px;
-        margin: 20px;
-    }
-
-    /* home layer 4 */
-    .homeContainerLayer4 {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .hcl3Credo,
-    .hcl3Vision {
-        width: 48%;
-        padding: 10px;
-    }
-
-    @keyframes slideInLeft {
-        0% {
-            transform: translateX(-100%);
-            opacity: 0;
+    <style>
+        /* -----------scroll bar hide--------------- */
+        /* For Webkit browsers (Chrome, Safari, etc.) */
+        ::-webkit-scrollbar {
+            display: none;
         }
 
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes slideInRight {
-        0% {
-            transform: translateX(100%);
-            opacity: 0;
+        /* For other browsers */
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
         }
 
-        100% {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes slideOutLeft {
-        0% {
-            transform: translateX(0);
-            opacity: 1;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
-        100% {
-            transform: translateX(-100%);
-            opacity: 0;
-        }
-    }
-
-    @keyframes slideOutRight {
-        0% {
-            transform: translateX(0);
-            opacity: 1;
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #008080, #00bcd4);
+            background-attachment: fixed;
         }
 
-        100% {
-            transform: translateX(100%);
-            opacity: 0;
+        /* Navbar */
+        .navbarContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 128, 128, 0.2);
+            padding: 1em 2em;
+            height: 150px;
+            backdrop-filter: blur(10px);
         }
-    }
 
-    /* Initial slide-in animations */
-    .hcl3Credo {
-        padding-left: 15px;
-        animation: slideInLeft 1s ease-out forwards;
-    }
+        .navLogo {
+            height: 100px;
+            width: auto;
+            margin: 0 1em;
+        }
 
-    .hcl3Vision {
-        padding-left: 15px;
-        animation: slideInRight 1s ease-out forwards;
-    }
+        .centerText {
+            text-align: center;
+            flex-grow: 1;
+            margin: 0 2em;
+        }
 
-    /* Reverse animations when scrolling up */
-    .hcl3Credo.reverse {
-        animation: slideOutLeft 1s ease-out forwards;
-    }
+        .clubName {
+            font-size: 60px;
+            font-weight: bolder;
+            color: aliceblue;
+        }
 
-    .hcl3Vision.reverse {
-        animation: slideOutRight 1s ease-out forwards;
-    }
+        .affiliation {
+            font-size: 20px;
+            color: aliceblue;
+        }
 
-    /* Reapply slide-in animations when scrolling down */
-    .hcl3Credo.active {
-        animation: slideInLeft 1s ease-out forwards;
-    }
+        .affiliation span {
+            font-size: 12px;
+        }
 
-    .hcl3Vision.active {
-        animation: slideInRight 1s ease-out forwards;
-    }
+        /* Home Layer 1 */
+        .homeContainerLayer1 {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #C7253E;
+            color: aliceblue;
+            font-size: 55px;
+            border-top: 2px solid aliceblue;
+            border-bottom: 2px solid aliceblue;
+        }
 
-    .hcl3Credo,
-    .hcl3Vision {
-        color: aliceblue;
-        font-size: 2rem;
-        line-height: 1.5;
-        background-color: rgb(199, 37, 62, .9);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        backdrop-filter: blur(10px);
-        text-transform: uppercase;
-    }
+        /* Home Layer 2 */
+        .homeContainerLayer2 {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid aliceblue;
+        }
 
-    /* home layer 5 */
-    /* Mission Section */
-    .homeContainerLayer5 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 50px;
-        color: #333333;
-        border-top: 2px solid aliceblue;
-        border-bottom: 2px solid aliceblue;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    }
+        .mottoBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
 
+        .mottoText {
+            cursor: pointer;
+            color: aliceblue;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
 
-    .missionContainer {
-        width: 80%;
-        text-align: center;
-        animation: fadeIn 2s ease-in-out forwards;
-    }
+        .mottoBox span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
 
-    .missionTitle {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        background-color: #C7253E;
-    }
+        .mottoBox span:hover {
+            transform: translateY(-10px);
+        }
 
-    .missionText {
-        color: aliceblue;
-        font-size: 1.5rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
+        /* Home Layer 3 */
+        .homeContainerLayer3 {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #C7253E;
+            font-size: 55px;
+            margin: 20px;
+        }
 
-    /* Fade-in animation for mission section */
-    @keyframes fadeIn {
-        0% {
+        /* Home Layer 4 */
+        .homeContainerLayer4 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 2%;
+        }
+
+        .hcl3Credo,
+        .hcl3Vision {
+            width: 48%;
+            padding: 15px;
+            background-color: rgba(199, 37, 62, 0.9);
+            color: aliceblue;
+            font-size: 2rem;
+            line-height: 1.5;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hcl3Credo {
+            animation: slideInLeft 1s ease-out forwards;
+        }
+
+        .hcl3Vision {
+            animation: slideInRight 1s ease-out forwards;
+        }
+
+        .homeContainerLayer5 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            color: #333333;
+            border-top: 2px solid aliceblue;
+            border-bottom: 2px solid aliceblue;
             opacity: 0;
             transform: translateY(20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
 
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+        .missionContainer {
+            width: 80%;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out forwards;
         }
-    }
 
-    /* registration */
-    .registrationContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 10px;
-        max-width: 600px;
-        margin: 0 auto;
-    }
+        .missionTitle {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-color: #C7253E;
+        }
 
-    .regFormContainer {
-        font-size: 3em;
-        color: aliceblue;
-        margin-bottom: 20px;
-    }
+        .missionText {
+            color: aliceblue;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
-    .registrationLink {
-        display: inline-block;
-        text-decoration: none;
-        color: aliceblue;
-        background-color: #C7253E;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 1em;
-        transition: background-color 0.3s ease;
-    }
+        /* Registration Section */
+        .registrationContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    .registrationLink:hover {
-        color: #C7253E;
-        background-color: aliceblue;
-    }
+        .regFormContainer {
+            font-size: 3em;
+            color: #C7253E;
+            margin-bottom: 20px;
+        }
 
-    /* footer */
-    .contactUs {
-        color: aliceblue;
-        font-size: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        background-color: #C7253E;
-        border-top: 2px solid aliceblue;
-    }
+        .registrationLink {
+            display: inline-block;
+            text-decoration: none;
+            color: aliceblue;
+            background-color: #C7253E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
 
-    .footerContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 50px;
-        background-color: #C7253E;
-    }
+        .registrationLink:hover {
+            color: #C7253E;
+            background-color: aliceblue;
+        }
 
-    .footerIcon {
-        width: 40px;
-        height: 40px;
-        margin: 0 15px;
-        transition: transform 0.3s ease;
-    }
+        /* Footer */
+        .contactUs {
+            color: aliceblue;
+            font-size: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #C7253E;
+            border-top: 2px solid aliceblue;
+        }
 
-    .footerIcon:hover {
-        transform: scale(1.2);
-    }
+        .footerContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #C7253E;
+        }
 
-/* Base styles remain the same */
+        .footerIcon {
+            width: 40px;
+            height: 40px;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
 
-/* Media query for screens smaller than 1000px */
-@media (max-width: 1000px) {
-    .navbarContainer {
-        flex-direction: column;
-        height: auto;
-        padding: 1em;
-    }
+        .footerIcon:hover {
+            transform: scale(1.2);
+        }
 
-    .clubName {
-        font-size: 40px;
-    }
+        /* Responsive Media Queries */
+        @media (max-width: 1000px) {
+            .navbarContainer {
+                flex-direction: column;
+                height: auto;
+                padding: 1em;
+            }
 
-    .affiliation {
-        font-size: 16px;
-    }
+            .clubName {
+                font-size: 40px;
+            }
 
-    .homeContainerLayer1 {
-        font-size: 45px;
-        height: auto;
-        padding: 10px;
-    }
+            .affiliation {
+                font-size: 16px;
+            }
 
-    .homeContainerLayer2{
-        height: 25vh;
-    }
+            .homeContainerLayer1 {
+                font-size: 45px;
+                padding: 10px;
+            }
 
-    .homeContainerLayer2 .mottoText {
-        font-size: 40px;
-    }
+            .homeContainerLayer2 {
+                height: 30vh;
+            }
 
-    .homeContainerLayer3 {
-        font-size: 45px;
-        margin: 15px;
-    }
+            .mottoText {
+                font-size: 40px;
+            }
 
-    .hcl3Credo,
-    .hcl3Vision {
-        font-size: 1.5rem;
-    }
+            .homeContainerLayer3 {
+                font-size: 40px;
+            }
 
-    .missionTitle {
-        font-size: 2.5rem;
-    }
+            .hcl3Credo,
+            .hcl3Vision {
+                font-size: 1.5rem;
+            }
 
-    .missionText {
-        font-size: 1.3rem;
-    }
+            .missionTitle {
+                font-size: 2.5rem;
+            }
 
-    .regFormContainer {
-        font-size: 2.5em;
-    }
+            .missionText {
+                font-size: 1.3rem;
+            }
 
-    .registrationLink {
-        font-size: 0.9em;
-    }
+            .regFormContainer {
+                font-size: 2em;
+            }
 
-    .contactUs {
-        font-size: 2.5rem;
-    }
-}
+            .contactUs {
+                font-size: 2.2rem;
+            }
+        }
 
-/* Media query for screens smaller than 650px */
-@media (max-width: 650px) {
-    .navbarContainer {
-        padding: 0.5em 1em;
-    }
+        @media (max-width: 650px) {
+            .navbarContainer {
+                padding: 0.5em 1em;
+            }
 
-    .clubName {
-        font-size: 30px;
-    }
+            .clubName {
+                font-size: 30px;
+            }
 
-    .affiliation {
-        font-size: 14px;
-    }
+            .affiliation {
+                font-size: 14px;
+            }
 
-    .homeContainerLayer1 {
-        font-size: 35px;
-        padding: 5px;
-    }
+            .homeContainerLayer1 {
+                font-size: 35px;
+                padding: 5px;
+            }
 
-    .homeContainerLayer2 .mottoText {
-        font-size: 30px;
-    }
+            .homeContainerLayer2 .mottoText {
+                font-size: 25px;
+            }
 
-    .homeContainerLayer3 {
-        font-size: 35px;
-        margin: 10px;
-    }
+            .homeContainerLayer3 {
+                font-size: 30px;
+                margin: 10px;
+            }
 
-    .hcl3Credo,
-    .hcl3Vision {
-        font-size: 1.2rem;
-    }
+            .hcl3Credo,
+            .hcl3Vision {
+                font-size: 1.2rem;
+            }
 
-    .missionTitle {
-        font-size: 2rem;
-    }
+            .missionTitle {
+                font-size: 2rem;
+            }
 
-    .missionText {
-        font-size: 1.2rem;
-    }
+            .missionText {
+                font-size: 1.2rem;
+            }
 
-    .regFormContainer {
-        font-size: 2em;
-    }
+            .regFormContainer {
+                font-size: 1.8em;
+            }
 
-    .registrationLink {
-        font-size: 0.8em;
-    }
+            .contactUs {
+                font-size: 2rem;
+            }
 
-    .contactUs {
-        font-size: 2rem;
-    }
+            .footerIcon {
+                width: 30px;
+                height: 30px;
+            }
+        }
 
-    .footerIcon {
-        width: 35px;
-        height: 35px;
-    }
-}
+        @media (max-width: 350px) {
+            .clubName {
+                font-size: 24px;
+            }
 
-/* Media query for screens smaller than 350px */
-@media (max-width: 350px) {
-    .clubName {
-        font-size: 24px;
-    }
+            .affiliation {
+                font-size: 12px;
+            }
 
-    .affiliation {
-        font-size: 12px;
-    }
+            .homeContainerLayer1 {
+                font-size: 18px;
+            }
 
-    .homeContainerLayer1 {
-        font-size: 28px;
-    }
+            .mottoText {
+                font-size: 22px;
+            }
 
-    .homeContainerLayer2 .mottoText {
-        font-size: 24px;
-    }
+            .homeContainerLayer3 {
+                font-size: 25px;
+            }
 
-    .homeContainerLayer3 {
-        font-size: 28px;
-        margin: 5px;
-    }
+            .hcl3Credo,
+            .hcl3Vision {
+                font-size: 1rem;
+            }
 
-    .hcl3Credo,
-    .hcl3Vision {
-        font-size: 1rem;
-    }
+            .missionTitle {
+                font-size: 1.5rem;
+            }
 
-    .missionTitle {
-        font-size: 1.5rem;
-    }
+            .missionText {
+                font-size: 1rem;
+            }
 
-    .missionText {
-        font-size: 1rem;
-    }
+            .regFormContainer {
+                font-size: 1.5em;
+            }
 
-    .regFormContainer {
-        font-size: 1.5em;
-    }
+            .registrationLink {
+                font-size: 0.8em;
+            }
 
-    .registrationLink {
-        font-size: 0.7em;
-    }
+            .contactUs {
+                font-size: 1.5rem;
+            }
 
-    .contactUs {
-        font-size: 1.5rem;
-    }
-
-    .footerIcon {
-        width: 30px;
-        height: 30px;
-    }
-}
-
-</style>
+            .footerIcon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    </style>
+</head>
 
 <body>
     <div class="navbarContainer">
@@ -576,23 +487,21 @@
     <div class="homeContainerLayer2">
         <div class="mottoBox">
             <div class="mottoText">
-                <span>“</span> <span>Lead</span> <span>with</span> <span>Integrity,</span> <span>Empower</span>
-                <span>for</span> <span>Equity,</span> <span>Unite</span> <span>for</span>
-                <span>Progress</span><span>”</span>
+                <span class="commaTag">“</span> <span>Lead</span> <span>with</span> <span>Integrity</span> <span>,</span> <span>Empower</span>
+                <span>for</span> <span>Equity</span> <span>,</span> <span>Unite</span> <span>for</span>
+                <span>Progress</span> <span class="commaTag">”</span>
             </div>
         </div>
     </div>
     <div class="homeContainerLayer3">CREDO . VISION</div>
     <div class="homeContainerLayer4">
-        <div class="hcl3Credo">We are the beacon for a new generation, believing in the power of youth to lead
-            with purpose, uplift the marginalized, and bridge the divides within our nation.
-            Together, we stand as the North Star, guiding Bharat towards unity, prosperity,
-            and equity. </div>
+        <div class="hcl3Credo">We are the beacon for a new generation, believing in the power of youth to lead with
+            purpose, uplift the marginalized, and bridge the divides within our nation. Together, we stand as the North
+            Star, guiding Bharat towards unity, prosperity, and equity. </div>
         <div class="hcl3Vision">
-            To inspire and nurture the dynamic generation of youth who are committed to
-            driving sustainable development, social equity, and national unity. Our vision is a
-            Bharat where every young person, regardless of background, is empowered to
-            lead, innovate, and contribute to a brighter, more inclusive future.
+            To inspire and nurture the dynamic generation of youth who are committed to driving sustainable development,
+            social equity, and national unity. Our vision is a Bharat where every young person, regardless of
+            background, is empowered to lead, innovate, and contribute to a brighter, more inclusive future.
         </div>
     </div>
     <div class="homeContainerLayer5">
@@ -604,20 +513,19 @@
             </p>
             <p class="missionText">
                 To cultivate leadership qualities rooted in justice, equality, and compassion, preparing young
-                individuals
-                to become agents of transformative change.
+                individuals to become agents of transformative change.
             </p>
             <p class="missionText">
                 To bridge the equity gap between rural and urban areas through collaborative initiatives, leadership
                 development programs, and strategic partnerships, fostering a spirit of unity and collective progress
-                across
-                Bharat.
+                across Bharat.
             </p>
         </div>
     </div>
     <div class="registrationContainer">
         <div class="regFormContainer">TO JOIN THE TEAM</div>
-        <a class="registrationLink" href="https://docs.google.com/forms/d/e/1FAIpQLSdhz9ENTc2hAUiiQmWc5uD-ZD4O21f14Yzp6Q3UOAeRlGwnhg/viewform"
+        <a class="registrationLink"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdhz9ENTc2hAUiiQmWc5uD-ZD4O21f14Yzp6Q3UOAeRlGwnhg/viewform"
             target="_blank">Click Here</a>
     </div>
     <div class="contactUs">CONTACT US</div>
@@ -629,49 +537,47 @@
         <a href="https://www.instagram.com/northstar.offl/" target="_blank"><img class="footerIcon" src="insta.png"
                 alt=""></a>
     </div>
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            let visionSection = document.querySelector('.homeContainerLayer4');
+            let missionSection = document.querySelector('.homeContainerLayer5');
+            let visionRect = visionSection.getBoundingClientRect();
+
+            if (st > lastScrollTop) {
+                // Scrolling down
+                document.querySelector('.hcl3Credo').classList.remove('reverse');
+                document.querySelector('.hcl3Vision').classList.remove('reverse');
+
+                document.querySelector('.hcl3Credo').classList.add('active');
+                document.querySelector('.hcl3Vision').classList.add('active');
+
+                // Check if vision section is fully in view
+                if (visionRect.bottom <= window.innerHeight && visionRect.top <= 0) {
+                    missionSection.style.opacity = '1';
+                    missionSection.style.transform = 'translateY(0)';
+                }
+
+            } else {
+                // Scrolling up
+                document.querySelector('.hcl3Credo').classList.remove('active');
+                document.querySelector('.hcl3Vision').classList.remove('active');
+
+                document.querySelector('.hcl3Credo').classList.add('reverse');
+                document.querySelector('.hcl3Vision').classList.add('reverse');
+
+                // Hide mission section when scrolling up and vision section is out of view
+                if (visionRect.top > window.innerHeight || visionRect.bottom > window.innerHeight) {
+                    missionSection.style.opacity = '0';
+                    missionSection.style.transform = 'translateY(20px)';
+                }
+            }
+
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        }, false);
+    </script>
 </body>
-<script>
-    let lastScrollTop = 0;
-
-    window.addEventListener("scroll", function () {
-        let st = window.pageYOffset || document.documentElement.scrollTop;
-        let visionSection = document.querySelector('.homeContainerLayer4');
-        let missionSection = document.querySelector('.homeContainerLayer5');
-        let visionRect = visionSection.getBoundingClientRect();
-
-        if (st > lastScrollTop) {
-            // Scrolling down
-            document.querySelector('.hcl3Credo').classList.remove('reverse');
-            document.querySelector('.hcl3Vision').classList.remove('reverse');
-
-            document.querySelector('.hcl3Credo').classList.add('active');
-            document.querySelector('.hcl3Vision').classList.add('active');
-
-            // Check if vision section is fully in view
-            if (visionRect.bottom <= window.innerHeight && visionRect.top <= 0) {
-                missionSection.style.opacity = '1';
-                missionSection.style.transform = 'translateY(0)';
-            }
-
-        } else {
-            // Scrolling up
-            document.querySelector('.hcl3Credo').classList.remove('active');
-            document.querySelector('.hcl3Vision').classList.remove('active');
-
-            document.querySelector('.hcl3Credo').classList.add('reverse');
-            document.querySelector('.hcl3Vision').classList.add('reverse');
-
-            // Hide mission section when scrolling up and vision section is out of view
-            if (visionRect.top > window.innerHeight || visionRect.bottom > window.innerHeight) {
-                missionSection.style.opacity = '0';
-                missionSection.style.transform = 'translateY(20px)';
-            }
-        }
-
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    }, false);
-
-</script>
-
 
 </html>
