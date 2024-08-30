@@ -259,8 +259,8 @@
             justify-content: center;
             padding: 20px;
             margin: 10px;
-            border-radius: 10px;
-            max-width: 600px;
+            /* border-radius: 10px; */
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -278,7 +278,7 @@
             background-color: rgb(18, 15, 34, 0.9);
             color: #EDF0DD;
             padding: 20px;
-            border-radius: 10px;
+            /* border-radius: 10px; */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
             opacity: 0;
@@ -458,56 +458,64 @@
         }
 
         @media (max-width: 350px) {
-            .clubName {
-                font-size: 24px;
-            }
+    .clubName {
+        font-size: 24px;
+    }
 
-            .affiliation {
-                font-size: 12px;
-            }
+    .affiliation {
+        font-size: 12px;
+    }
 
-            .homeContainerLayer1 {
-                font-size: 18px;
-            }
+    .homeContainerLayer1 {
+        font-size: 18px;
+    }
 
-            .mottoText {
-                font-size: 22px;
-            }
+    .mottoText {
+        font-size: 22px;
+    }
 
-            .homeContainerLayer3 {
-                font-size: 25px;
-            }
+    .homeContainerLayer3 {
+        font-size: 25px;
+    }
 
-            .hcl3Credo,
-            .hcl3Vision {
-                font-size: 1rem;
-            }
+    .homeContainerLayer4 {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .missionTitle {
-                font-size: 1.5rem;
-            }
+    .hcl3Credo,
+    .hcl3Vision {
+        font-size: 1rem;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-            .missionText {
-                font-size: 1rem;
-            }
+    .missionTitle {
+        font-size: 1.5rem;
+    }
 
-            .regFormContainer {
-                font-size: 1.5em;
-            }
+    .missionText {
+        font-size: 1rem;
+    }
 
-            .registrationLink {
-                font-size: 0.8em;
-            }
+    .regFormContainer {
+        font-size: 1.5em;
+    }
 
-            .contactUs {
-                font-size: 1.5rem;
-            }
+    .registrationLink {
+        font-size: 0.8em;
+    }
 
-            .footerIcon {
-                width: 25px;
-                height: 25px;
-            }
-        }
+    .contactUs {
+        font-size: 1.5rem;
+    }
+
+    .footerIcon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
     </style>
 </head>
 
