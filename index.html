@@ -36,17 +36,19 @@
         body {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background: linear-gradient(135deg, #008080, #00bcd4);
+            min-height: 100vh;
+            background: linear-gradient(135deg, #120f22, #6E6890);
             background-attachment: fixed;
+            overflow-x: hidden;
         }
+
 
         /* Navbar */
         .navbarContainer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: rgba(0, 128, 128, 0.2);
+            background-color: rgb(18, 15, 34);
             padding: 1em 2em;
             height: 150px;
             backdrop-filter: blur(10px);
@@ -58,6 +60,10 @@
             margin: 0 1em;
         }
 
+        .navLogo.gov {
+            height: 80px;
+        }
+
         .centerText {
             text-align: center;
             flex-grow: 1;
@@ -67,12 +73,12 @@
         .clubName {
             font-size: 60px;
             font-weight: bolder;
-            color: aliceblue;
+            color: #EDF0DD;
         }
 
         .affiliation {
             font-size: 20px;
-            color: aliceblue;
+            color: #EDF0DD;
         }
 
         .affiliation span {
@@ -86,11 +92,11 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: #C7253E;
-            color: aliceblue;
+            background-color: #6E6890;
+            color: #EDF0DD;
             font-size: 55px;
-            border-top: 2px solid aliceblue;
-            border-bottom: 2px solid aliceblue;
+            border-top: 2px solid #EDF0DD;
+            border-bottom: 2px solid #EDF0DD;
         }
 
         /* Home Layer 2 */
@@ -99,7 +105,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 2px solid aliceblue;
+            border-bottom: 2px solid #EDF0DD;
         }
 
         .mottoBox {
@@ -111,8 +117,9 @@
         }
 
         .mottoText {
+            padding: 5%;
             cursor: pointer;
-            color: aliceblue;
+            color: #EDF0DD;
             font-size: 50px;
             font-weight: bold;
             text-align: center;
@@ -134,7 +141,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #C7253E;
+            color: #EDF0DD;
             font-size: 55px;
             margin: 20px;
         }
@@ -152,8 +159,8 @@
         .hcl3Vision {
             width: 48%;
             padding: 15px;
-            background-color: rgba(199, 37, 62, 0.9);
-            color: aliceblue;
+            background-color: rgb(110, 104, 144, .9);
+            color: #EDF0DD;
             font-size: 2rem;
             line-height: 1.5;
             border-radius: 5px;
@@ -211,9 +218,9 @@
             align-items: center;
             justify-content: center;
             padding: 50px;
-            color: #333333;
-            border-top: 2px solid aliceblue;
-            border-bottom: 2px solid aliceblue;
+            color: #EDF0DD;
+            border-top: 2px solid #EDF0DD;
+            border-bottom: 2px solid #EDF0DD;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -232,11 +239,11 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            background-color: #C7253E;
+            background-color: #EDF0DD;
         }
 
         .missionText {
-            color: aliceblue;
+            color: #EDF0DD;
             font-size: 1.5rem;
             line-height: 1.8;
             margin-bottom: 20px;
@@ -244,6 +251,7 @@
         }
 
         /* Registration Section */
+
         .registrationContainer {
             display: flex;
             flex-direction: column;
@@ -258,15 +266,36 @@
 
         .regFormContainer {
             font-size: 3em;
-            color: #C7253E;
+            color: #EDF0DD;
             margin-bottom: 20px;
+        }
+
+        .regFormPopup {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(18, 15, 34, 0.9);
+            color: #EDF0DD;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .regFormPopup.active {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
         }
 
         .registrationLink {
             display: inline-block;
             text-decoration: none;
-            color: aliceblue;
-            background-color: #C7253E;
+            color: #EDF0DD;
+            background-color: #6E6890;
             padding: 10px 20px;
             border-radius: 5px;
             font-size: 1em;
@@ -274,20 +303,20 @@
         }
 
         .registrationLink:hover {
-            color: #C7253E;
-            background-color: aliceblue;
+            color: #6E6890;
+            background-color: #EDF0DD;
         }
 
         /* Footer */
         .contactUs {
-            color: aliceblue;
+            color: #EDF0DD;
             font-size: 3rem;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px;
-            background-color: #C7253E;
-            border-top: 2px solid aliceblue;
+            background-color: #6E6890;
+            border-top: 2px solid #EDF0DD;
         }
 
         .footerContainer {
@@ -295,7 +324,7 @@
             justify-content: center;
             align-items: center;
             padding: 50px;
-            background-color: #C7253E;
+            background-color: #6E6890;
         }
 
         .footerIcon {
@@ -310,7 +339,7 @@
         }
 
         /* Responsive Media Queries */
-        @media (max-width: 1000px) {
+        @media (max-width: 1050px) {
             .navbarContainer {
                 flex-direction: column;
                 height: auto;
@@ -365,6 +394,16 @@
         }
 
         @media (max-width: 650px) {
+            .navLogo {
+                height: 40px;
+                width: auto;
+                margin: 0 1em;
+            }
+
+            .navLogo.gov {
+                height: 35px;
+            }
+
             .navbarContainer {
                 padding: 0.5em 1em;
             }
@@ -378,12 +417,12 @@
             }
 
             .homeContainerLayer1 {
-                font-size: 35px;
+                font-size: 20px;
                 padding: 5px;
             }
 
             .homeContainerLayer2 .mottoText {
-                font-size: 25px;
+                font-size: 20px;
             }
 
             .homeContainerLayer3 {
@@ -474,7 +513,7 @@
 
 <body>
     <div class="navbarContainer">
-        <a href="https://nyks.nic.in" target="_blank"><img class="navLogo gov" src="govLogoW.png" alt="NYKS Link"></a>
+        <a href="https://nyks.nic.in" target="_blank"><img class="navLogo gov" src="nyksLogo.png" alt="NYKS Link"></a>
         <div class="centerText">
             <div class="clubName">NORTH STAR</div>
             <div class="affiliation">
@@ -487,7 +526,8 @@
     <div class="homeContainerLayer2">
         <div class="mottoBox">
             <div class="mottoText">
-                <span class="commaTag">“</span> <span>Lead</span> <span>with</span> <span>Integrity</span> <span>,</span> <span>Empower</span>
+                <span class="commaTag">“</span> <span>Lead</span> <span>with</span> <span>Integrity</span>
+                <span>,</span> <span>Empower</span>
                 <span>for</span> <span>Equity</span> <span>,</span> <span>Unite</span> <span>for</span>
                 <span>Progress</span> <span class="commaTag">”</span>
             </div>
@@ -522,7 +562,7 @@
             </p>
         </div>
     </div>
-    <div class="registrationContainer">
+    <div class="registrationContainer regFormPopup">
         <div class="regFormContainer">TO JOIN THE TEAM</div>
         <a class="registrationLink"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdhz9ENTc2hAUiiQmWc5uD-ZD4O21f14Yzp6Q3UOAeRlGwnhg/viewform"
@@ -544,6 +584,7 @@
             let st = window.pageYOffset || document.documentElement.scrollTop;
             let visionSection = document.querySelector('.homeContainerLayer4');
             let missionSection = document.querySelector('.homeContainerLayer5');
+            let regForm = document.querySelector('.regFormPopup');
             let visionRect = visionSection.getBoundingClientRect();
 
             if (st > lastScrollTop) {
@@ -553,6 +594,8 @@
 
                 document.querySelector('.hcl3Credo').classList.add('active');
                 document.querySelector('.hcl3Vision').classList.add('active');
+
+                regForm.classList.add('active'); // Show registration form on scroll down
 
                 // Check if vision section is fully in view
                 if (visionRect.bottom <= window.innerHeight && visionRect.top <= 0) {
@@ -568,6 +611,8 @@
                 document.querySelector('.hcl3Credo').classList.add('reverse');
                 document.querySelector('.hcl3Vision').classList.add('reverse');
 
+                regForm.classList.remove('active'); // Hide registration form on scroll up
+
                 // Hide mission section when scrolling up and vision section is out of view
                 if (visionRect.top > window.innerHeight || visionRect.bottom > window.innerHeight) {
                     missionSection.style.opacity = '0';
@@ -577,6 +622,7 @@
 
             lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
         }, false);
+
     </script>
 </body>
 
